@@ -2,14 +2,13 @@ name: Workflow for run python file
 on: push
 
 jobs:
-
   Hello:
     runs-on: ubuntu-latest
     steps:
-    - uses: actions/checkout@v4
+      - uses: actions/checkout@v4
 
-    - uses: action/setup-python@v5
-      with:
-        python-version: '3.10'
-      
-    - runs: python file_1.py
+      - uses: action/setup-python@v5
+        with:
+          python-version: "3.10"
+
+      - run: python file_1.py
